@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(235, 235, 235);
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: rgb(46, 46, 46);
+}
+
+.container {
+    display: grid;
+    width: 100vw;
+    height: 90vh;
+    place-items: center center;
+}
+
+h1 {
+    font-weight: 700;
+    padding: 10px;
+}
+
+h2 {
+    font-weight: 300;
+}
