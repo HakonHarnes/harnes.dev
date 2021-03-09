@@ -17,3 +17,12 @@ body {
     height: 90vh;
     place-items: center center;
 }
+
+h1 {
+    font-weight: 700;
+    padding: 10px;
+}
+
+h2 {
+    font-weight: 300;
+}
