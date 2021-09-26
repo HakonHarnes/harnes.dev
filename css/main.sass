@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap')
+
+// Variables
+$border-radius: 1.2em    
+
+// Colors 
+$link-hover: #fff 
+
+body, html 
+    height: calc(100% - 1em)
+    font-family: 'Montserrat'
+
+body
+    margin: 2em
+a 
+    text-decoration: none
+
+ul
+    list-style-type: none
+    padding: 0
+
+nav 
+    padding: 0
+    margin: 0 
+
+.front-page
+    display: grid
+    grid-template-columns: minmax(25%, 30em) 1fr
+    gap: 10em
+    height: calc(100% - 2em)
+    max-height: 1500px
+    margin-bottom: 4em
+
+.sidebar 
+        display: grid
+        grid-template-rows: 1fr auto 1fr
+        border-radius: $border-radius
+        background: #DCE1F6
+
+        &__figure 
+            display: grid
+            justify-items: center
+            gap: 2em
+
+        &__avatar
+            align-self: end
+
+        &__caption 
+            font-weight: bold
+            font-size: 1.4em
+            align-self: start
+
+        &__avatar
+            display: block
+            background: #fff
+            border-radius: 50%
+            width: 120px
+            height: 120px
+
+        &__links 
+            .nav
+                display: grid
+                grid-template-rows: 1fr 1fr 1fr
+
+                &__link
+                    display: block
+                    padding: 1.4em 3em
+                    color: #000
+                    background: rgba(255, 255, 255, .35);
+
+                    &:hover 
+                        background: $link-hover
+
+.general-info
+    display: grid
+    height: 10em
+    align-self: center
+    place-items: center start
+    grid-template-rows: 1fr 1fr 1fr
+    font-size: 2em
+    gap: 1em
+
+    *
+        margin: 0
+
+    &__title 
+        font-size: 2em
+
+    &__scroll
+        width: 1.05em
+
+        &:hover
+            cursor: pointer
+
+        .circle 
+            animation: scrollAnimation 1s infinite alternate-reverse; 
+
+.footer 
+    display: grid
+    place-items: center center
+    grid-template-rows: 2fr 1fr
+    background: gray 
+    margin: -2em
+    height: 20em
+    background: #404040
+    color: white
+
+    &__socials
+        display: grid
+        width: 50%
+        margin-top: 4em
+        place-items: center center
+        grid-template-columns: 1fr 1fr 1fr
+
+        .icon
+            width: 5em
+            color: white
+
+            &:hover 
+                cursor: pointer 
+
+@media screen and (min-width: 2560px)
+    body
+        margin: 2em auto
+        width: calc(2560px - 5em)
+
+@media screen and (max-width: 1550px)
+    .general-info
+        font-size: 1.8em
+
+    .front-page
+        gap: 5em
+
+@media screen and (max-width: 1385px)
+    .general-info
+        font-size: 1.5em
+
+    .front-page
+        grid-template-columns: minmax(25%, 25em) 1fr
+        gap: 5em
+
+@media screen and (max-width: 1180px)
+    .general-info
+        font-size: 1.3em
+
+    .front-page
+        gap: 5em
+
+@media screen and (max-width: 900px)
+    body, html 
+        height: 100%
+
+    .front-page
+        grid-template-columns: 1fr
+        grid-template-rows: auto 1fr
+
+    .sidebar 
+        grid-template-rows: 1fr auto
+        text-align: center
+
+        &__links
+            margin-bottom: -$border-radius
+
+    .general-info
+        align-self: start
+        grid-template-rows: auto auto 1fr
+        height: 100%
+        place-items: center center
+        text-align: center
+
+        &__scroll
+            align-self: end
+
+    .footer
+        height: 12em 
+
+        &__socials 
+            margin-top: 2em
+            width: 100%
+
+            .icon 
+                width: 4em
+
+@media screen and (max-width: 620px)
+    body, html 
+        height: calc(100% + .5em)
+
+    body 
+        margin: 1em
+
+    .general-info
+        font-size: 1.0em
+
+        &__scroll
+            font-size: 1.3em
+
+    .footer 
+        margin: -1em
+
+
+@media screen and (max-height: 750px)
+    .sidebar 
+        grid-template-rows: 1fr auto
+
+        &__links
+            margin-bottom: -$border-radius
+
+
+@keyframes scrollAnimation 
+    from 
+        transform: translate(262px, 798px)
+        z-index: 5
+    
+    to 
+        transform: translate(262px, 830px)
+        z-index: 5
+    
+
+
