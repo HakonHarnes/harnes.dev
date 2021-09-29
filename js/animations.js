@@ -1,10 +1,28 @@
 import { startTerminal } from './terminal.js'; 
 
+// Hides page when animations are loading 
 window.onload = () => {
     const frontPage = document.querySelector('.front-page');
     frontPage.style.visibility = 'visible'; 
 }
 
+// Contact me scrolls into view when button is clicked 
+const contactMeLink = document.querySelector('.nav__contact-me'); 
+contactMeLink.addEventListener('click', event => {
+    const contactMe = document.querySelector('.contact-me'); 
+    contactMe.scrollIntoView(); 
+    event.preventDefault(); 
+});
+
+// Content scrolls into view when scroller is clicked 
+const scroll = document.querySelector('.general-info__scroll'); 
+scroll.addEventListener('click', event => {
+    const aboutMe = document.querySelector('.about-me'); 
+    aboutMe.scrollIntoView(); 
+    event.preventDefault(); 
+});
+
+// Checks if site is one column 
 let oneColumn = window.innerWidth < 1250; 
 
 // Registers the scrolltrigger plugin 
@@ -59,7 +77,7 @@ if(oneColumn){
     gsap.from('.about-me__terminal', {
         scrollTrigger: {
             trigger: '.about-me__terminal', 
-            start: "center bottom",
+            start: "top bottom",
             onEnter: startTerminal, 
         }, 
         opacity: 0, 
