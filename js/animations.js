@@ -22,6 +22,14 @@ scroll.addEventListener('click', event => {
     event.preventDefault(); 
 });
 
+// Loading animation for contact me button 
+const contactMeButton = document.querySelector('.contact-me__button'); 
+contactMeButton.addEventListener('click', () => {
+    contactMeButton.classList.add('button--loading'); 
+    contactMeButton.disabled = true; 
+});
+
+
 // Checks if site is one column 
 let oneColumn = window.innerWidth < 1250; 
 
@@ -126,3 +134,4 @@ gsap.from('.timeline__container', {
     ease: Power4.easeOut, 
     duration: 1
 })
+
