@@ -35,6 +35,7 @@ section {
   max-height: 1500px;
   margin-bottom: 40px;
   margin-top: 40px;
+  visibility: hidden;
 }
 
 .sidebar {
