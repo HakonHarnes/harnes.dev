@@ -114,27 +114,15 @@ gsap.from('.skill', {
 })
 
 // NTNU timeline  
-gsap.from('.timeline__ntnu', {
+gsap.from('.timeline__container', {
     scrollTrigger: {
-        trigger: '.timeline__ntnu', 
+        trigger: '.timeline__container', 
         start: "center bottom", 
         
     }, 
     opacity: 0, 
     y: 100, 
-    ease: Power4.easeOut, 
-    duration: 1
-})
-
-// UiA timeline  
-gsap.from('.timeline__uia', {
-    scrollTrigger: {
-        trigger: '.timeline__uia', 
-        start: "center bottom", 
-        
-    }, 
-    opacity: 0, 
-    y: 100, 
+    stagger: 0.25, 
     ease: Power4.easeOut, 
     duration: 1
 })
