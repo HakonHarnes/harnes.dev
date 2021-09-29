@@ -5,12 +5,15 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title>Håkon Harnes</title>
         <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="termynal/termynal.css">
+
+        <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
     </head>
     <body>
         <section class="front-page">
-            <aside class="sidebar left-transition">
+            <aside class="sidebar">
                 <figure class="sidebar__figure">
-                    <div class="sidebar__avatar"></div>
+                    <img src="assets/profile.png" class="sidebar__avatar"/>
                     <figcaption class="sidebar__caption">Håkon Harnes</figcaption>
                 </figure>
                 <nav class="sidebar__links">
@@ -18,15 +21,15 @@
                         <li class="nav__item nav__linkedin"><a class="nav__link" target="_blank" href="https://www.linkedin.com/in/h%C3%A5kon-harnes-b88352209/">LinkedIn</a></li>
                         <li class="nav__item nav__github"><a class="nav__link" target="_blank" href="https://github.com/HakonHarnes">GitHub</a></li>
                         <li class="nav__item nav__email"><a class="nav__link" target="_blank" href="mailto:hakon@harnes.dev">Email</a></li>
-                        <li class="nav__item nav__contact"><a class="nav__link" href="#">Contact me</a></li>
+                        <li class="nav__item nav__contact"><a class="nav__link" href="#contact-me">Contact me</a></li>
                     </ul>
                 </nav>
             </aside>
     
-            <main class="general-info top-transition">
-                <h1 class="general-info__title stagger">I'm a computer engineer</h1>
-                <p class="general-info__desc stagger">👇 Meet Håkon Harnes</p>
-                <svg class="general-info__scroll appear" width="40" height="77" viewBox="0 0 40 77">
+            <main class="general-info">
+                <h1 class="general-info__title stagger-info">I'm a developer</h1>
+                <p class="general-info__desc stagger-info">👇 Scroll to learn more</p>
+                <a href="#about-me"><svg class="general-info__scroll appear" width="40" height="77" viewBox="0 0 40 77">
                     <g id="scroll" transform="translate(-253 -787)">
                       <g id="Rectangle_12" data-name="Rectangle 12" transform="translate(253 787)" fill="none" stroke="#111" stroke-width="4">
                         <rect width="40" height="77" rx="20" stroke="none"/>
@@ -34,60 +37,95 @@
                       </g>
                       <circle class="circle" id="Ellipse_1" data-name="Ellipse 1" cx="11" cy="11" r="11" transform="translate(262 798)" fill="#111"/>
                     </g>
-                  </svg>
+                  </svg></a>
             </main>
         </section>
-        
+
+        <section id="about-me" class="about-me">
+            <div class="about-me__info">
+                <p class="about-me__subtitle">$whoami</p>
+                <h1 class="about-me__title">Who am i?</h1>
+                <p class="about-me__desc">I am a student at the Norwegian University of Science and Technology. At the moment, I'm studying for my M.S. in Computer Science, where my specialization is Algorithms and Computers. I will be graduating in spring 2023.</p>
+            </div>
+
+            <div class="about-me__terminal" id="termynal"></div> 
+        </section>
+
+        <div class="skills-wrapper">
+            <section class="skills">
+                <ul>
+                    <li class="skill">
+                        <svg class="skill__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#000" d="M16 2c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6zm0-2c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zm-5.405 16.4l-1.472 1.6h-3.123v2h-2v2h-2v-2.179l5.903-5.976c-.404-.559-.754-1.158-1.038-1.795l-6.865 6.95v5h6v-2h2v-2h2l2.451-2.663c-.655-.249-1.276-.562-1.856-.937zm7.405-11.4c.551 0 1 .449 1 1s-.449 1-1 1-1-.449-1-1 .449-1 1-1zm0-1c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2z"/></svg>
+                        <p class="skill__title">Security</p>
+                        <p class="skill__desc">Security peaks my interest. My knowledge within cyber security has resulted in uncovering live vulnerabilites. </p>
+                    </li>
+                    <li class="skill">
+                        <svg class="skill__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.008 0c-4.225 0-10.008 1.001-10.008 4.361v15.277c0 3.362 6.209 4.362 10.008 4.362 3.783 0 9.992-1.001 9.992-4.361v-15.278c0-3.361-5.965-4.361-9.992-4.361zm0 2c3.638 0 7.992.909 7.992 2.361 0 1.581-5.104 2.361-7.992 2.361-3.412.001-8.008-.905-8.008-2.361 0-1.584 4.812-2.361 8.008-2.361zm7.992 17.386c0 1.751-5.104 2.614-7.992 2.614-3.412 0-8.008-1.002-8.008-2.614v-2.04c2.117 1.342 5.17 1.78 8.008 1.78 2.829 0 5.876-.438 7.992-1.78v2.04zm0-4.873c0 1.75-5.104 2.614-7.992 2.614-3.412-.001-8.008-1.002-8.008-2.614v-2.364c2.116 1.341 5.17 1.78 8.008 1.78 2.839 0 5.881-.442 7.992-1.78v2.364zm-7.992-2.585c-3.426 0-8.008-1.006-8.008-2.614v-2.371c2.117 1.342 5.17 1.78 8.008 1.78 2.829 0 5.876-.438 7.992-1.78v2.372c0 1.753-5.131 2.613-7.992 2.613z"/></svg>
+                        <p class="skill__title">Back-end</p>
+                        <p class="skill__desc">I especially find the security aspect of back-end development, like authentication and authorization, to be interesting.</p>
+                    </li>
+                    <li class="skill">
+                        <svg class="skill__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 10.935v2.131l-8 3.947v-2.23l5.64-2.783-5.64-2.79v-2.223l8 3.948zm-16 3.848l-5.64-2.783 5.64-2.79v-2.223l-8 3.948v2.131l8 3.947v-2.23zm7.047-10.783h-2.078l-4.011 16h2.073l4.016-16z"/></svg>
+                        <p class="skill__title">Front-end</p>
+                        <p class="skill__desc">I also like designing things. For reference, have a look at this website. </p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+         <div class="timeline-wrapper"> 
+            <section class="timeline">
+                <div class="timeline__container timeline__ntnu">
+                    <div class="timeline__info">
+                        <p class="subtitle subtitle-ms">NTNU (2021 - )</p>
+                        <h2 class="title">M.S. in Computer Science</h2>
+                        <p class="subtitle subtitle-bs">NTNU (2018 - 2021)</p>
+                        <h2 class="title">B.S. in Computer Science</h2>
+                    </div>
+
+                    <a href="https://www.ntnu.no" target="_blank"><img class="logo" src="assets/ntnu.jpg" alt="NTNU M.S"></a>
+                </div>
+                
+                <div class="timeline__container timeline__uia">
+                    <div class="timeline__info">
+                        <p class="subtitle subtitle-uia">UiA (2017 - 2018)</p>
+                        <h2 class="title">Computer Science</h2>
+                    </div>
+
+                    <a href="https://www.uia.no/" target="_blank"><img class="logo" src="assets/uia.jpg" alt="UiA B.S"></a>
+                </div>
+            </section>
+        </div>
+
+        <div class="contact-me__wrapper">
+            <section id="contact-me" class="contact-me">
+                <div class="contact-me__container bottom-transition">
+                    <h2 class="contact-me__title">Let's talk</h2>
+                    <form class="contact-me__form" action="">
+                        <input class="contact-me__name" placeholder="Name" type="text" required>
+                        <input class="contact-me__email" placeholder="Your email" type="email" required>
+                        <textarea name="contact" id="" cols="30" rows="10" placeholder="Message" class="contact-me__message" required></textarea>
+                        <button class="contact-me__button">Say hi! 👋</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+
         <section class="footer">
             <div class="footer__socials">
                 <a target="_blank" href="https://www.linkedin.com/in/h%C3%A5kon-harnes-b88352209/"><svg class="linkedin-icon icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#fff" d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/></svg></a>
                 <a target="_blank" href="https://github.com/HakonHarnes" href="#"><svg class="github-icon icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#fff" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
-                <a target="_blank" href="mailto:hakon@harnes.dev"><svg class="email-icon icon"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#fff" d="M13.718 10.528c0 .792-.268 1.829-.684 2.642-1.009 1.98-3.063 1.967-3.063-.14 0-.786.27-1.799.687-2.58 1.021-1.925 3.06-1.624 3.06.078zm10.282 1.472c0 6.627-5.373 12-12 12s-12-5.373-12-12 5.373-12 12-12 12 5.373 12 12zm-5-1.194c0-3.246-2.631-5.601-6.256-5.601-4.967 0-7.744 3.149-7.744 7.073 0 3.672 2.467 6.517 7.024 6.517 2.52 0 4.124-.726 5.122-1.288l-.687-.991c-1.022.593-2.251 1.136-4.256 1.136-3.429 0-5.733-2.199-5.733-5.473 0-5.714 6.401-6.758 9.214-5.071 2.624 1.642 2.524 5.578.582 7.083-1.034.826-2.199.799-1.821-.756 0 0 1.212-4.489 1.354-4.975h-1.364l-.271.952c-.278-.785-.943-1.295-1.911-1.295-2.018 0-3.722 2.19-3.722 4.783 0 1.73.913 2.804 2.38 2.804 1.283 0 1.95-.726 2.364-1.373-.3 2.898 5.725 1.557 5.725-3.525z"/></svg></a>
+                <a target="_blank" href="mailto:hakon@harnes.dev"><svg class="mail-icon icon"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#fff" d="M12 .02c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.99 6.98l-6.99 5.666-6.991-5.666h13.981zm.01 10h-14v-8.505l7 5.673 7-5.672v8.504z"/></svg></a>
             </div>
             
             <p class="footer_copyright">© Håkon Harnes 2021</p>
-        </section>
+        </section> 
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js" integrity="sha512-DlTk2PLUinhBupE89kHOJTt11QqbRMQVlbb26XVDvp4D1kt0fRvQJslvZnTelRJHq6yK0tIPCR7cul8+9Blz0g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="termynal/termynal.js" data-termynal-container="#termynal"></script>
 
-        <script>
-            ( () => {
-                const scroll = document.querySelector('.general-info__scroll');  
-                scroll.addEventListener("click", () => {
-                    document.querySelector('.footer').scrollIntoView({ behavior: 'smooth'}); 
-                })
-            })(); 
-
-            gsap.registerPlugin(ScrollTrigger); 
-            const t1 = gsap.timeline(); 
-
-            t1.from('.top-transition', {
-                y: '-30%', 
-                opacity: 0, 
-                duration: 2, 
-                ease: Power4.easeOut
-            })
-
-            t1.from('.stagger', {
-                opacity: 0,
-                y: -50, 
-                stagger: .5, 
-                ease: Power4.easeOut, 
-                duration: 2
-            }, "-=1.5")
-
-            t1.from('.left-transition', {
-                opacity: 0, 
-                x: -100, 
-                ease: Power4.easeOut, 
-                duration: 1
-            }, "-=1.5")
-
-            t1.from('.appear', {
-                opacity: 0, 
-                duration: 1
-            }, "+=2")
-        </script>
+        <script type="module" src="js/animations.js" ></script>
+        <script type="module" src="js/terminal.js" ></script>
     </body>
 </html>
