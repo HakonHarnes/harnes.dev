@@ -86,8 +86,8 @@ section
         &__avatar
             display: block
             border-radius: 50%
-            width: 9em
-            height: 9em
+            width: 8em
+            height: 8em
 
         &__links 
             .nav
@@ -398,10 +398,17 @@ section
                 cursor: pointer 
 
 
-@media screen and (max-width: 2090px)
+@media screen and (max-width: 2250px)
     section
-        width: calc(100% - 80px)
-        margin: 0 40px
+        width: calc(100% - 240px)
+        margin: 0 120px
+
+@media screen and (max-width: 1500px)
+    .front-page
+        font-size: 0.9em
+
+    .about-me
+        gap: 2em
 
 @media screen and (max-width: 1250px)
     // ----------------------
@@ -467,6 +474,11 @@ section
     .timeline
         .logo
             width: 26em
+
+@media screen and (max-width: 1050px)
+    section
+        width: calc(100% - 80px)
+        margin: 0 40px
 
 @media screen and (max-width: 900px)   
     .about-me

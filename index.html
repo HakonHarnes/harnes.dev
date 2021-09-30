@@ -102,9 +102,9 @@
                 <div class="contact-me__container bottom-transition">
                     <h2 class="contact-me__title">Let's talk</h2>
                     <form class="contact-me__form" action="">
-                        <input class="contact-me__name" placeholder="Name" type="text" required>
-                        <input class="contact-me__email" placeholder="Your email" type="email" required>
-                        <textarea name="contact" id="" cols="30" rows="10" placeholder="Message" class="contact-me__message" required></textarea>
+                        <input class="contact-me__name" placeholder="Name" type="text" maxLength="50" required>
+                        <input class="contact-me__email" placeholder="Your email" type="email" maxLength="50" required>
+                        <textarea name="contact" id="" cols="30" rows="10" placeholder="Message" maxlength="255" class="contact-me__message" required></textarea>
                         <button class="contact-me__button"><span>Say hi! 👋</span></button>
                     </form>
                 </div>
@@ -127,5 +127,6 @@
 
         <script type="module" src="js/animations.js" ></script>
         <script type="module" src="js/terminal.js" ></script>
+        <script type="module" src="js/email.js" ></script>
     </body>
 </html>
