@@ -3,6 +3,10 @@
 // Border radius 
 $border-radius: 1em    
 
+// Button colors 
+$button-success: #04630b
+$button-error: #b91d1d
+
 // Sidebar colors
 $sidebar-background: #435560
 $sidebar-button: #516470
@@ -128,7 +132,7 @@ section
             cursor: pointer
 
         .circle 
-            animation: scrollAnimation 1s infinite alternate-reverse; 
+            animation: scrollAnimation 1s infinite alternate-reverse 
 
 
 // -------------------------
@@ -303,7 +307,7 @@ section
         padding: .75em 1.5em
         background: white
 
-    button
+    .button
         position: relative
         cursor: pointer
         font-weight: 600
@@ -313,37 +317,32 @@ section
         &:hover
             background: $contact-me-button-hover 
 
-    .button--loading
-        text-indent: -9000px
-        text-transform: capitalize
-        background: $contact-me-button-hover
-        
-        &:hover
+        &--loading
             background: $contact-me-button-hover
-    
-    .button--loading::after 
-        content: "";
-        position: absolute;
-        width: 1em;
-        height: 1em;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-        border: 4px solid transparent;
-        border-top-color: white;
-        border-radius: 50%;
-        animation: button-loading-spinner 1s ease infinite;
-
-    @keyframes button-loading-spinner 
-        from 
-            transform: rotate(0turn);
-
-        to 
-            transform: rotate(1turn);
+            
+            &:hover
+                background: $contact-me-button-hover
         
-    
+            &::after 
+                content: ""
+                position: absolute
+                width: 1em
+                height: 1em
+                top: 0
+                left: 0
+                right: 0
+                bottom: 0
+                margin: auto
+                border: 4px solid transparent
+                border-top-color: white
+                border-radius: 50%
+                animation: button-loading-spinner 1s ease infinite
+
+        &--success 
+            background: $button-success
+
+        &--error
+            background: $button-error
 
     textarea::-webkit-input-placeholder 
         font-family: 'Montserrat'
@@ -601,6 +600,8 @@ section
             border-radius: 0
             padding:  1em 0em
     
+
+    
 @keyframes scrollAnimation 
     from 
         transform: translate(262px, 798px)
@@ -609,6 +610,10 @@ section
     to 
         transform: translate(262px, 830px)
         z-index: 5
-    
 
+@keyframes button-loading-spinner 
+        from 
+            transform: rotate(0turn);
 
+        to 
+            transform: rotate(1turn);

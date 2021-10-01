@@ -343,7 +343,7 @@ section {
   background: white;
 }
 
-.contact-me button {
+.contact-me .button {
   position: relative;
   cursor: pointer;
   font-weight: 600;
@@ -351,13 +351,11 @@ section {
   color: white;
 }
 
-.contact-me button:hover {
+.contact-me .button:hover {
   background: #526161;
 }
 
 .contact-me .button--loading {
-  text-indent: -9000px;
-  text-transform: capitalize;
   background: #526161;
 }
 
@@ -382,26 +380,12 @@ section {
           animation: button-loading-spinner 1s ease infinite;
 }
 
-@-webkit-keyframes button-loading-spinner {
-  from {
-    -webkit-transform: rotate(0turn);
-            transform: rotate(0turn);
-  }
-  to {
-    -webkit-transform: rotate(1turn);
-            transform: rotate(1turn);
-  }
+.contact-me .button--success {
+  background: #04630b;
 }
 
-@keyframes button-loading-spinner {
-  from {
-    -webkit-transform: rotate(0turn);
-            transform: rotate(0turn);
-  }
-  to {
-    -webkit-transform: rotate(1turn);
-            transform: rotate(1turn);
-  }
+.contact-me .button--error {
+  background: #b91d1d;
 }
 
 .contact-me textarea::-webkit-input-placeholder {
@@ -687,6 +671,28 @@ section {
     -webkit-transform: translate(262px, 830px);
             transform: translate(262px, 830px);
     z-index: 5;
+  }
+}
+
+@-webkit-keyframes button-loading-spinner {
+  from {
+    -webkit-transform: rotate(0turn);
+            transform: rotate(0turn);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+
+@keyframes button-loading-spinner {
+  from {
+    -webkit-transform: rotate(0turn);
+            transform: rotate(0turn);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
   }
 }
 /*# sourceMappingURL=main.css.map */

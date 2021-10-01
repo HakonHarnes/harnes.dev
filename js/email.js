@@ -1,19 +1,21 @@
-
 // HTML elements 
 const form = document.querySelector('.contact-me__form'); 
 const button = document.querySelector('.contact-me__button'); 
+const toast = document.querySelector('.toast'); 
+
+const buttonText = button.innerHTML; 
 
 // Form submit listener 
 form.addEventListener('submit', async e => {
-    
+
     // Prevents default form behavious 
     e.preventDefault(); 
 
     // Shows loading button 
-   showLoadingButton(); 
+    showLoadingButton(); 
 
     // Sends data to server  
-    const response = await fetch('http://localhost:3000/api/email',
+    const response = await fetch('https://harnes-dev-api.herokuapp.com/api/email',
     {
         method: 'POST', 
         headers: {
@@ -28,32 +30,40 @@ form.addEventListener('submit', async e => {
     }); 
 
     // Shows response 
-    // TODO: Implement proper toast 
     if(response.status === 200){
         showSuccessButton(); 
-        form.reset(); 
+        setTimeout(() => { form.reset() } , 3000); 
     }
-    else {
-        alert('Error: Please contact me at hakon@harnes.dev');
-        showErrorButton();
-    }
-
+    else showErrorButton();
+        
+    // Displays normal button again 
+    setTimeout(displayNormalButton, 3000); 
 });
 
 // Shows loading button 
 const showLoadingButton = () => {
     button.classList.add('button--loading'); 
+    button.innerHTML = "‏‏‎ ‎‎‎"; 
     button.disabled = true; 
 }
 
-// Shows success button 
-const showSuccessButton = () => {
-    button.classList.remove('button--loading'); 
+// Hides loading button 
+const displayNormalButton = () => {
+    button.className = 'contact-me__button button'
+    button.innerHTML = buttonText; 
     button.disabled = false; 
 }
 
-// Shows success button 
+// Shows success button
+const showSuccessButton = () => {
+    button.classList.remove('button--loading'); 
+    button.classList.add('button--success'); 
+    button.innerHTML = "✔"; 
+}
+
+// Shows error button
 const showErrorButton = () => {
     button.classList.remove('button--loading'); 
-    button.disabled = false; 
+    button.classList.add('button--error'); 
+    button.innerHTML = "✖"; 
 }
