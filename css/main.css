@@ -564,6 +564,9 @@ section {
     margin: 0;
   }
   .skills ul .skill {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
     height: auto;
     margin: 0;
   }
