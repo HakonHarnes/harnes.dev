@@ -9,6 +9,10 @@ a {
   text-decoration: none;
 }
 
+p {
+  line-height: 1.6em;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
@@ -32,6 +36,7 @@ section {
       grid-template-columns: minmax(30%, 30em) 1fr;
   gap: 10%;
   height: calc(100vh - 80px);
+  min-height: 500px;
   max-height: 1500px;
   margin-bottom: 40px;
   margin-top: 40px;
@@ -195,6 +200,9 @@ section {
   height: 20em;
   width: 100%;
   border-radius: 1em;
+  box-shadow: 0px 17px 18px -7px rgba(159, 159, 159, 0.19);
+  -webkit-box-shadow: 0px 17px 18px -7px rgba(159, 159, 159, 0.19);
+  -moz-box-shadow: 0px 17px 18px -7px rgba(159, 159, 159, 0.19);
 }
 
 .skills ul .skill__icon {
@@ -226,7 +234,7 @@ section {
 
 .timeline {
   padding-top: 12em;
-  padding-bottom: 4em;
+  padding-bottom: 10em;
   display: -ms-grid;
   display: grid;
   gap: 2em;
@@ -451,6 +459,12 @@ section {
   }
 }
 
+@media screen and (max-width: 1550px) {
+  .skills ul .skill {
+    height: 22em;
+  }
+}
+
 @media screen and (max-width: 1500px) {
   .front-page {
     font-size: 0.9em;
@@ -473,7 +487,7 @@ section {
   .sidebar {
     -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
-    border-radius: 0;
+    margin: 1em;
   }
   .sidebar__avatar {
     display: none;
@@ -490,6 +504,12 @@ section {
   .sidebar__links .nav__link {
     text-align: center;
     padding: 1.4em 0;
+  }
+  .sidebar__links .nav__linkedin {
+    border-radius: 0 0 0 1em;
+  }
+  .sidebar__links .nav__contact-me {
+    border-radius: 0 0 1em 0;
   }
   .general-info {
     -ms-grid-column-align: center;
@@ -509,11 +529,11 @@ section {
     margin-bottom: 2em;
   }
   .skills ul {
-    height: 24em;
+    height: 26em;
   }
   .skills ul .skill {
     margin-bottom: -7em;
-    height: 22em;
+    height: 24em;
   }
   .timeline .logo {
     width: 26em;
@@ -618,6 +638,9 @@ section {
   .contact-me input, .contact-me button, .contact-me textarea {
     font-size: 1.0em;
   }
+  .footer {
+    height: 15em;
+  }
 }
 
 @media screen and (max-width: 430px) {
@@ -625,8 +648,11 @@ section {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
   }
-  .sidebar__links .nav .nav__contact {
+  .sidebar__links .nav__contact-me {
     display: none;
+  }
+  .sidebar__links .nav__email {
+    border-radius: 0 0 1em 0;
   }
   .contact-me {
     width: calc(100% - 2em);
